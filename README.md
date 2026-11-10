@@ -10,10 +10,12 @@ The study covers 2,146 administrative units in Argentina and Brazil during 1974�
 |---|---|---|
 | ENSO indices and classification | Frozen monthly/seasonal series, annual windows and standard-library classifier | Reproduces all 51 harvest assignments: 17 El Niño, 19 La Niña and 15 neutral |
 | Agricultural/ENSO analysis | Quality-controlled yields, reconstructed local panel, archived targets, predictions, folds, tuning, original R scripts and Python replay/sensitivity code | ENSO replay and additional linear-trend validation can run offline |
-| Revision analyses | Antecedent-ENSO, continuous-water and matched-climate code; returned predictions, diagnostics, repair logs and audits | Returned results can be audited offline; full water/climate reruns need the local inputs listed below |
+| Revision analyses | Antecedent-ENSO, continuous-water and matched-climate code; returned predictions, diagnostics, repair logs and audits | Returned results can be audited offline; the full water/climate inputs are supplied in the release assets listed below |
 | Figures | Final main and supplementary figures, original R figure scripts, scientific diagnostic code and reporting-boundary code/data | Figure versions and limitations are described below |
 
-**Not included:** the full original daily NASA POWER cache and `soybean_climate_indices_grid_year.csv.gz`. These remained on the author's computer and were not present in the supplied archives. Consequently, this release does **not** provide a complete one-command rerun of every original seven-index hierarchical climate/PCA analysis. The original R scripts are preserved, but their presence does not imply every stage was rerun for this public release. Some archived exploratory figure scripts use earlier predictor sets; do not substitute those outputs for the final seven-index figures.
+The full original scientific project was subsequently supplied by the corresponding author on 10 November 2026 and is included as **three release assets**: 2,150 files (1.61 GB before compression). This includes the daily NASA POWER caches and the full grid/year climate panel that were absent from the initial revision archive. Download and restore these separately using `restore_original_data.py` below.
+
+The original R scripts are preserved, but their presence does not imply that every original seven-index hierarchical climate/PCA stage was rerun for this public release. Some archived exploratory figure scripts use earlier predictor sets; do not substitute those outputs for the final seven-index figures. Original inputs/figures and final revision outputs are kept separately to preserve provenance.
 
 ## Quick start
 
@@ -51,26 +53,25 @@ python validation/restore_enso_project.py
 
 The original R scripts are in `validation/archived_R_scripts/`. In R, set `Sys.setenv(ENSO_SOYBEAN_PROJECT_DIR = "/absolute/path/to/enso_project")`, or pass the project path as the first argument for scripts that support command-line arguments. The initial download script now also honors this environment variable. Package requirements are listed in `R_DEPENDENCIES.txt`; an exact original R lockfile was not available. Re-downloading live data may produce different source values from the frozen analysis inputs.
 
-### Full water and matched-climate reruns
+### Restore the original data and rerun water/climate analyses
 
-The following commands require the author's external project directory:
+The [versioned release](https://github.com/rogeriosouzanoia/soybean-enso-south-america/releases/tag/v2026.11.10) includes:
+
+- `original_project_core_2026-11-10.zip`: original agricultural inputs, detrending outputs, ENSO records, climate-index panels, model outputs, metadata and historical figures.
+- `original_power_daily_grid_2026-11-10.zip`: 882 daily meteorological grid files.
+- `original_power_et0_inputs_2026-11-10.zip`: 882 active ET0 input files and three pre-correction backups.
 
 ```bash
-python revision/run_water_memory.py --project /path/to/enso_project
-python revision/run_climate_revision.py --project /path/to/enso_project
+python restore_original_data.py --download
+python revision/run_water_memory.py --project original_project --output reruns/water
+python revision/run_climate_revision.py --project original_project --water reruns/water/water_initialization_local.csv.gz --output reruns/climate
 ```
 
-That directory must contain:
+The restore command uses only the Python standard library, checks archive and member SHA-256 values and restores the original directory structure under `original_project/`. It refuses to overwrite modified files. For a manual download, use `python restore_original_data.py --archive-dir /path/to/downloaded/assets`. Allow space for the compressed assets and the 1.61 GB extracted project. The complete original weather cache covers 1981 through July 2024; the revision requires 1984-01-01 through 2024-07-31, audited here for all eight used weather variables.
 
-- `climate_mechanisms/NASA_POWER_grid_manifest.csv`
-- `climate_mechanisms/soybean_spatial_units_with_calendars.csv`
-- `climate_mechanisms/soybean_climate_indices_grid_year.csv.gz`
-- `climate_mechanisms/soybean_water_balance_primary_AWC100.csv`
-- `climate_mechanisms/NASA_POWER_daily_grid/POWER_GRID_*.csv.gz`
-- `climate_mechanisms/NASA_POWER_daily_ET0_inputs/POWER_GRID_*_ET0.csv.gz`
-- `data_merged/soybean_ENSO_spatial_panel_1974_2024.csv` (the recovered panel can be used where the script allows it).
+`ORIGINAL_DATA_MANIFEST.json` records all 2,150 files and their source/public hashes. `ORIGINAL_DATA_CHECKS.json` records complete expected weather coverage without missing/invalid required values and agreement of all 82,259 original/recovered agricultural rows after normalizing administrative-code padding. Only three metadata files had personal computer paths replaced; numerical values were not changed. The three ET0 backups preserve the pre-correction values. The four original off-season radiation estimates recorded in the revision remain estimates, not NASA observations.
 
-The optional `revision/EXECUTAR_REVISAO.R` wrapper runs the preflight and numerical workflow through reticulate. Set `ENSO_SOYBEAN_PROJECT_DIR` and `ENSO_REVISION_DIR` to your local project and this repository's `revision` directory. It may install dependencies and repair eligible isolated off-season radiation gaps, preserving backups and logs. Review its documented behavior before running it on a data cache. Four original off-season radiation estimates are explicitly recorded in the returned analysis; they are not NASA observations.
+The optional `revision/EXECUTAR_REVISAO.R` wrapper runs the preflight and numerical workflow through reticulate. Set `ENSO_SOYBEAN_PROJECT_DIR` to the restored `original_project` and `ENSO_REVISION_DIR` to this repository's `revision` directory. It may install dependencies and repair eligible isolated off-season radiation gaps, preserving backups and logs; read its behavior before running it on a different cache. The released active cache already passes the required-variable audit. These checks establish input availability and consistency; they are not a new end-to-end R or climate-model rerun.
 
 ## ENSO definition
 
@@ -86,7 +87,9 @@ The episode may peak after the focal harvest. These are retrospective episode la
 - `figures/`: reporting-boundary reconstruction script; final figures unpack from `figures_geometry_*.zip`.
 - `geometry/`: frozen generalized Natural Earth 1:50 million boundaries, restored by the unpacker.
 - `SOURCE_PROVENANCE.json`, `PUBLICATION_CHANGES.csv`: source/public hashes and explicitly documented portability edits.
-- `DATA_MANIFEST.json`: inventory and checksums for the archived data and figures.
+- `DATA_MANIFEST.json`: inventory and checksums for the archived revision data and figures.
+- `ORIGINAL_DATA_MANIFEST.json`, `ORIGINAL_DATA_CHECKS.json`, `ORIGINAL_DATA_CHANGES.json`, `ORIGINAL_WEATHER_AUDIT.csv`: original-data inventory, verification and portability changes.
+- `restore_original_data.py`: verified restoration of the three large release assets.
 
 The reporting map in Figures 1 and 3 outlines Argentina and unions of complete Brazilian states assigned to each reporting group; darker polygons identify sampled administrative units. It is not a historical soybean land-cover map. Rebuild it with `python figures/rebuild_reporting_boundaries.py` after unpacking the data. Final raster figures retain their original native resolution; TIFF metadata does not add detail. The locator also has a vector PDF. `revision/response_illustrations/` contains scientific diagnostic plots used during revision; confidential peer-review correspondence and editorial documents are not part of this research repository.
 

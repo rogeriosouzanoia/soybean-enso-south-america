@@ -1,0 +1,25 @@
+{
+  "original_weather": {
+    "grids": 882,
+    "active_files": 1764,
+    "extra_ET0_backups": 3,
+    "period": [
+      "1984-01-01",
+      "2024-07-31"
+    ],
+    "issues": [],
+    "all_required_files_present": true
+  },
+  "original_panel_comparison": {
+    "matched_rows": 82259,
+    "maximum_anomaly_difference": 3.552713678800501e-15,
+    "maximum_ONI_difference": 0.0,
+    "phase_mismatches": 0,
+    "intensity_mismatches": 0,
+    "ID_normalization": "Argentina 5 digits and Brazil 7 digits, as used by the revision ids() helper; comparison only, source IDs preserved"
+  },
+  "drive_inventory_files": 2150,
+  "download_size_mismatches": 0,
+  "machine_path_files_sanitized": 3,
+  "full_R_or_climate_model_rerun_for_deposit": false
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "file": "metadata/ENSO_source_metadata.csv",
+    "replacements": 3,
+    "original_sha256": "6ba7b8be5aa8fba0b891c3ffb3c7b89f3a9b7295fa93846d44724e4a2d184c65",
+    "public_sha256": "839f7a95993be296d6d2c069da83414e0a2cede115108adb67d5bd95eae62206",
+    "change": "Replace machine-specific project prefix with original_project; numerical data unchanged"
+  },
+  {
+    "file": "climate_mechanisms/NASA_POWER_daily_file_index.csv",
+    "replacements": 882,
+    "original_sha256": "b15695ddf52296f428283b6f650d32b004b1ddf1fb8c0b19eb976839ca20a70d",
+    "public_sha256": "803d00e4cb52f75d4bb575049ae59dbb3c9988e643f5a8f067e2c081b7db2595",
+    "change": "Replace machine-specific project prefix with original_project; numerical data unchanged"
+  },
+  {
+    "file": "climate_mechanisms/QC_NASA_POWER_download_status.csv",
+    "replacements": 882,
+    "original_sha256": "3feb9366a0e7a2067b453fe1061e09c41ee8e21d6142ca51e130296c69e0a8d8",
+    "public_sha256": "8cdcc50b036529ac22c74de38b93d59e5977f7e25d82da25c69d9f6624090304",
+    "change": "Replace machine-specific project prefix with original_project; numerical data unchanged"
+  }
+]

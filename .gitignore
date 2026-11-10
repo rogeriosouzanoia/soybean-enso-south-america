@@ -5,3 +5,6 @@ __pycache__/
 .RData
 .DS_Store
 validation/enso_project/
+original_project/
+.data_archives/
+reruns/
