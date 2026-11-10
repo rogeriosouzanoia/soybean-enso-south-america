@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.DS_Store
+validation/enso_project/

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite this research repository and record the exact commit used; the associated manuscript is under revision."
+title: "Soybean yield responses to ENSO in South America: research code and archived results"
+type: software
+authors:
+  - family-names: "de Souza Nóia Júnior"
+    given-names: "Rogério"
+  - family-names: "Christo"
+    given-names: "Bruno Fardim"
+  - family-names: "Schwerz"
+    given-names: "Felipe"
+  - family-names: "Dias"
+    given-names: "Henrique Boriolo"
+version: "2026.11.10"
+date-released: "2026-11-10"
+repository-code: "https://github.com/rogeriosouzanoia/soybean-enso-south-america"
+keywords:
+  - soybean
+  - ENSO
+  - agrometeorology
+  - South America
+  - reproducibility

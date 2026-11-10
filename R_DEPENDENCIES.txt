@@ -1,0 +1,28 @@
+Original R package names identified from explicit library()/require() calls.
+An exact original lockfile was not supplied; consult each script for additional conditional dependencies.
+
+dplyr
+fixest
+future
+future.apply
+geoAr
+geobr
+ggplot2
+ggrepel
+grid
+httr
+httr2
+jsonlite
+lubridate
+patchwork
+purrr
+readr
+reticulate
+rnaturalearth
+scales
+sf
+stringr
+systemfonts
+tibble
+tidyr
+zoo

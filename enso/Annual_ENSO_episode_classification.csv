@@ -1,0 +1,52 @@
+harvest_year,oni_djf_c,phase,episode_strength,display_strength,qualifying_run_id,episode_start_center_date,episode_end_center_date,episode_peak_absolute_c,peak_seasons
+1974,-1.87,La Nina,Very strong,Strong,39,1973-05-01,1974-06-01,2.04,NDJ 1973
+1975,-0.56,La Nina,Strong,Strong,41,1974-10-01,1976-03-01,1.58,NDJ 1975
+1976,-1.49,La Nina,Strong,Strong,41,1974-10-01,1976-03-01,1.58,NDJ 1975
+1977,0.71,El Nino,Weak,Weak,43,1976-09-01,1977-02-01,0.84,NDJ 1976
+1978,0.71,El Nino,Weak,Weak,45,1977-10-01,1978-02-01,0.84,OND 1977
+1979,0.19,Neutral,Neutral,Neutral,,,,,
+1980,0.62,Neutral,Neutral,Neutral,,,,,
+1981,-0.27,Neutral,Neutral,Neutral,,,,,
+1982,-0.05,Neutral,Neutral,Neutral,,,,,
+1983,2.14,El Nino,Very strong,Strong,49,1982-05-01,1983-06-01,2.14,DJF 1983
+1984,-0.63,La Nina,Weak,Weak,51,1983-10-01,1984-02-01,0.96,OND 1983
+1985,-1.01,La Nina,Moderate,Moderate,55,1984-10-01,1985-06-01,1.06,NDJ 1984
+1986,-0.4,Neutral,Neutral,Neutral,,,,,
+1987,1.18,El Nino,Moderate,Moderate,57,1986-09-01,1988-01-01,1.49,ASO 1987
+1988,0.63,El Nino,Moderate,Moderate,57,1986-09-01,1988-01-01,1.49,ASO 1987
+1989,-1.64,La Nina,Strong,Strong,59,1988-05-01,1989-05-01,1.85,NDJ 1988
+1990,0.18,Neutral,Neutral,Neutral,,,,,
+1991,0.35,Neutral,Neutral,Neutral,,,,,
+1992,1.54,El Nino,Strong,Strong,61,1991-06-01,1992-06-01,1.54,DJF 1992
+1993,0.13,Neutral,Neutral,Neutral,,,,,
+1994,0.07,Neutral,Neutral,Neutral,,,,,
+1995,0.88,El Nino,Weak,Weak,65,1994-10-01,1995-02-01,0.97,NDJ 1994
+1996,-0.88,La Nina,Moderate,Moderate,67,1995-08-01,1996-03-01,1.05,OND 1995
+1997,-0.41,Neutral,Neutral,Neutral,,,,,
+1998,2.22,El Nino,Very strong,Strong,69,1997-05-01,1998-04-01,2.37,NDJ 1997
+1999,-1.51,La Nina,Strong,Strong,71,1998-07-01,2000-06-01,1.53,NDJ 1999
+2000,-1.47,La Nina,Strong,Strong,71,1998-07-01,2000-06-01,1.53,NDJ 1999
+2001,-0.76,La Nina,Weak,Weak,73,2000-10-01,2001-02-01,0.78,NDJ 2000
+2002,-0.15,Neutral,Neutral,Neutral,,,,,
+2003,0.9,El Nino,Moderate,Moderate,75,2002-07-01,2003-02-01,1.19,OND 2002
+2004,0.34,Neutral,Neutral,Neutral,,,,,
+2005,0.62,El Nino,Weak,Weak,77,2004-08-01,2005-02-01,0.71,NDJ 2004
+2006,-0.86,La Nina,Weak,Weak,79,2005-11-01,2006-03-01,0.86,DJF 2006
+2007,0.62,El Nino,Weak,Weak,81,2006-09-01,2007-01-01,0.88,OND 2006; NDJ 2006
+2008,-1.76,La Nina,Strong,Strong,83,2007-08-01,2008-06-01,1.76,DJF 2008
+2009,-0.89,La Nina,Weak,Weak,85,2008-11-01,2009-03-01,0.89,DJF 2009
+2010,1.47,El Nino,Strong,Strong,87,2009-07-01,2010-03-01,1.5,NDJ 2009
+2011,-1.29,La Nina,Strong,Strong,89,2010-06-01,2011-05-01,1.57,OND 2010
+2012,-0.71,La Nina,Moderate,Moderate,91,2011-08-01,2012-02-01,1.02,OND 2011
+2013,-0.24,Neutral,Neutral,Neutral,,,,,
+2014,-0.24,Neutral,Neutral,Neutral,,,,,
+2015,0.73,El Nino,Very strong,Strong,93,2014-10-01,2016-05-01,2.59,NDJ 2015
+2016,2.5,El Nino,Very strong,Strong,93,2014-10-01,2016-05-01,2.59,NDJ 2015
+2017,-0.08,Neutral,Neutral,Neutral,,,,,
+2018,-0.71,La Nina,Weak,Weak,97,2017-11-01,2018-03-01,0.76,NDJ 2017
+2019,0.99,El Nino,Moderate,Moderate,99,2018-09-01,2019-06-01,1.05,NDJ 2018
+2020,0.71,El Nino,Weak,Weak,101,2019-10-01,2020-03-01,0.75,NDJ 2019
+2021,-0.99,La Nina,Moderate,Moderate,103,2020-09-01,2021-04-01,1.11,OND 2020
+2022,-0.76,La Nina,Weak,Weak,105,2021-09-01,2023-01-01,0.91,OND 2021
+2023,-0.55,La Nina,Weak,Weak,105,2021-09-01,2023-01-01,0.91,OND 2021
+2024,1.84,El Nino,Strong,Strong,107,2023-06-01,2024-04-01,1.99,NDJ 2023

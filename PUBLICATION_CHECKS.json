@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-10",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "matplotlib": "3.10.8",
+  "python_sources_parse": true,
+  "private_paths_or_credential_markers_detected": 0,
+  "numerical_behavior_checks": "passed (8 categories)",
+  "recovered_yield_and_phase_checks": {
+    "passed": 8,
+    "failed": 0,
+    "checks": [
+      {
+        "check": "recovered_panel_rows",
+        "passed": true,
+        "value": 82259
+      },
+      {
+        "check": "recovered_panel_unique_keys",
+        "passed": true,
+        "value": 82259
+      },
+      {
+        "check": "recovered_panel_reproduces_field_targets",
+        "passed": true,
+        "value": 2.1316282072803006e-14
+      },
+      {
+        "check": "phase_mean_rows",
+        "passed": true,
+        "value": 4292
+      },
+      {
+        "check": "phase_mean_new",
+        "passed": true,
+        "value": 2.0261570199409107e-13
+      },
+      {
+        "check": "phase_median_new",
+        "passed": true,
+        "value": 3.92602617083071e-13
+      },
+      {
+        "check": "phase_percent_new",
+        "passed": true,
+        "value": 1.517582859378308e-08
+      },
+      {
+        "check": "phase_event_counts",
+        "passed": true,
+        "value": 0
+      }
+    ]
+  },
+  "returned_output_audit_checks_passed": 863,
+  "enso_classification": "all seasonal assignments and 51 harvest years passed; 17 El Nino, 19 La Nina, 15 neutral",
+  "R_rerun_for_publication": false,
+  "full_weather_rerun_for_publication": false,
+  "notes": "Original source/result archives are retained. The public copy changes machine-specific path metadata, clarifies the R7 axis and reruns available offline audits. No numerical model assumptions or manuscript results were changed."
+}
